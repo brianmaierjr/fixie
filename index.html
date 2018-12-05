@@ -1,0 +1,31 @@
+---
+layout: default
+title: Simple and minimal portfolio theme for Jekyll
+---
+
+<div class="home" id="home">
+
+  <div class="pageIntro">
+    <div class="pageIntroContainer wrap">
+      <p>Fixie is a dead simple portfolio site created by <a href="https://commutercreative.com" target="_blank">Commuter Creative</a> based off of our own site. That’s right, we are giving our own site design away, for free. Karma, here we come.</p>
+    </div>
+  </div>
+
+  <div class="themes">
+    <div class="themesSection themesSection--free wrap">
+      <h1 class="h2 decorative">Featured Work</h1>
+      <div class="themesContainer">
+      {% for theme in site.themes %}
+        <a class="themesItem" href="{{ theme.url }}" data-aos="fade-up">
+          <picture>
+            <source srcset="{{ site.url }}/assets/img/{{ theme.featured-image }}.webp" type="image/webp">
+            <source srcset="{{ site.url }}/assets/img/{{ theme.featured-image }}.png" type="image/png">
+            <img src="{{ site.url }}/assets/img/{{ theme.featured-image }}.png" alt="{{ theme.title }}">
+          </picture>
+        </a>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>

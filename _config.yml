@@ -1,0 +1,34 @@
+title: Fixie
+description: A simple and minimal portfolio theme for Jekyll
+
+# url: http://brianmaierjr.github.com/fixie
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+markdown: kramdown
+highlighter: rouge
+gems: [jekyll-paginate]
+paginate: 5
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: Portfolio
+   url: /portfolio.html
+ - title: About Us
+   url: /about-us.html
+ - title: Contact Us
+   url: /contact-us.html
+
+social:
+   github: commutercreative
+   twitter: commutercreative
+   facebook: commutercreative
+   email: contact@commutercreative.com
+
+google_analytics: "UA-58263416-1"

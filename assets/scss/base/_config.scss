@@ -1,0 +1,60 @@
+/***************
+COLOR VARIABLES
+***************/
+$blue--light: #12ABBC;
+$blue: #0D2F3B;
+$blue--dark: #061C23;
+$green: #CFE87E;
+$black: #333;
+$gray: #ECECEC;
+$gray--light: #f5f5f5;
+
+$link-color: $blue--light;
+
+/***************
+CONSISTENT SETTINGS
+***************/
+$br: 5px; // Border-radius
+$btn-br: 5px; // Button border-radius
+$padding: 40px; // Padding and margins
+$line-height: 44px; // Consistent height for buttons, inputs etc.
+
+/***************
+TYPE SETTINGS
+***************/
+$sans-serif: "Muli", Helvetica, Arial, sans-serif;
+$serif: "Zilla Slab", Georgia, Times, serif;
+$headings: "Playfair Display", sans-serif;
+
+/***************
+SIZES
+Browser Context (this is needed for the px to em's mixin)
+***************/
+$browser-context: 16; // Default
+
+/***************
+RESPONSIVE BREAKPOINTS
+***************/
+$breakpoints: (
+  sm: 481px,
+  md: 768px,
+  lg: 1080px,
+  wrap: 1240px
+);
+
+/***************
+CONTENT WRAP SIZES
+***************/
+$wraps: (
+  sm: 400px,
+  md: 700px,
+  lg: 1040px,
+  wrap: 1240px
+);
+
+/***************
+IMAGES
+***************/
+$hero-sm: "hero-background-sm.jpg"; // width should be 800px
+$hero-md: "hero-background-md.jpg"; // width should be 1200px
+$hero-lg: "hero-background-lg.jpg"; // width should be > 1200px

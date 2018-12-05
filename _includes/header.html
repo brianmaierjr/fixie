@@ -1,0 +1,18 @@
+ <header class="header">
+   <div class="header__container wrap">
+     <div class="header__logo">
+       <a class="header__logoLink" href="{{ site.baseurl }}/">
+         {% include logo.svg %}
+       </a>
+     </div>
+     <nav class="headerNav">
+       <ul class="noList headerNav__list">
+         {% for link in site.navigation %}{% assign current = nil %}{% if page.url contains link.url or page.url == 'index.html' %}{% assign current = 'current' %}{% endif %}
+         <li class="headerNav__link {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+           <a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
+         </li>
+         {% endfor %}
+       </ul>
+     </nav>
+   </div>
+ </header><!-- end .header -->
