@@ -91,3 +91,17 @@ TEXT MIXINS
   font-family: $headings;
   font-weight: normal;
 }
+
+// heading text
+@mixin link-text {
+  font-family: $sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: rem(2); 
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

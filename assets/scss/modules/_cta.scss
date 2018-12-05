@@ -1,17 +1,14 @@
-.signup {
+.cta {
   background-color: $gray--light;
   @include sectionspace();
   text-align: center;
 
   .wrap {
-    max-width: map-get($wraps, lg);
-
-    p {
-      @include intro-text();
-    }
+    max-width: map-get($wraps, md);
+    line-height: 1.8;
   }
 }
 
-.signup__heading {
+.cta__heading {
   @include heading-text;
 }

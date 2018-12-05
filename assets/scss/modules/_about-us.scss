@@ -1,0 +1,55 @@
+.about-us {
+  background-color: $blue;
+  text-align: center;
+  color: white;
+
+  @include min(md) {
+    display: flex;
+  }
+
+  > * {
+    flex: 1;
+  }
+
+  &__content {
+    @include sectionspace();
+    max-width: rem(600);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include min(sm) {
+      order: 1;
+      text-align: left;
+    }
+  }
+
+  &__media {
+    padding-bottom: 51%;
+    background-image: url(/assets/img/about-us.jpg);
+    background-size: cover;
+    background-position: center top;
+
+    @include min(sm) {
+      order: 2;
+    }
+  }
+
+  &__action {
+    @include link-text();
+    color: $green;
+
+    &:hover,
+    &:focus {
+      color: $green;
+    }
+  }
+}
+
+.cta__heading {
+  @include heading-text;
+}

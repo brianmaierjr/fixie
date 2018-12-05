@@ -1,28 +1,66 @@
 .footer {
   @include sectionspace;
   text-align: center;
+  background-color: $blue--dark;
+  color: white;
 }
 
-.footer__logo {
-  display: block;
-  max-width: rem(380);
-  margin: 0 auto rem(20);
-}
-
-.footer__copy {
-  font-size: rem(14);
-}
-
-.footerNav__link {
-  display: inline;
-  @include nav-text;
-  padding: 0 rem(5);
-
+.footer__container {
   @include min(md) {
-    padding: 0 rem(10);
+    display: flex;
   }
 
-  a {
-    text-decoration: none;
+  > * {
+    @include min(md) {
+      flex: 1;
+    }
+  }
+}
+
+.footerInfo {
+
+  @include min(md) {
+    text-align: left;
+  }
+
+  &__logo {
+    display: block;
+    max-width: rem(380);
+    margin: 0 auto rem(20);
+
+    @include min(md) {
+      margin-left: 0;
+    }
+  }
+
+  &__copy {
+    font-size: rem(14);
+  }
+
+  &__item {
+    margin-bottom: rem(10);
+    font-size: rem(14);
+  }
+
+}
+
+.footerNav {
+  @include min(md) {
+    text-align: right;
+  }
+
+  &__link {
+    display: inline;
+    @include nav-text;
+    padding: 0 rem(5);
+
+    @include min(md) {
+      padding: 0 rem(10);
+    }
+
+    a {
+      text-decoration: none;
+      color: $green;
+    }
   }
 }

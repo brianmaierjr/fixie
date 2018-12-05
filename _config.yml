@@ -13,7 +13,7 @@ paginate: 5
 collections:
   portfolio:
     output: true
-    permalink: /portfolio/:path/
+    permalink: /portf/:path/
 
 navigation:
  - title: Home
@@ -26,9 +26,9 @@ navigation:
    url: /contact-us.html
 
 social:
-   github: commutercreative
-   twitter: commutercreative
-   facebook: commutercreative
-   email: contact@commutercreative.com
+ - icon: test.svg
+   url: https://github.com/brianmaierjr/fixie/
+ - icon: test2.svg
+   url: https://github.com/brianmaierjr/
 
 google_analytics: "UA-58263416-1"

@@ -15,12 +15,12 @@ title: Simple and minimal portfolio theme for Jekyll
     <div class="themesSection themesSection--free wrap">
       <h1 class="h2 decorative">Featured Work</h1>
       <div class="themesContainer">
-      {% for theme in site.themes %}
-        <a class="themesItem" href="{{ theme.url }}" data-aos="fade-up">
+      {% for project in site.portfolio %}
+        <a class="themesItem" href="{{ project.url }}" data-aos="fade-up">
           <picture>
-            <source srcset="{{ site.url }}/assets/img/{{ theme.featured-image }}.webp" type="image/webp">
-            <source srcset="{{ site.url }}/assets/img/{{ theme.featured-image }}.png" type="image/png">
-            <img src="{{ site.url }}/assets/img/{{ theme.featured-image }}.png" alt="{{ theme.title }}">
+            <source srcset="{{ site.url }}/assets/img/{{ project.featured-image }}.webp" type="image/webp">
+            <source srcset="{{ site.url }}/assets/img/{{ project.featured-image }}.png" type="image/png">
+            <img src="{{ site.url }}/assets/img/{{ project.featured-image }}.png" alt="{{ theme.title }}">
           </picture>
         </a>
       {% endfor %}

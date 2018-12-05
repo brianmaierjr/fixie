@@ -1,6 +1,27 @@
 <footer class="footer">
    <div class="footer__container wrap">
-     <a class="footer__logo" href="{{ site.baseurl }}/">{% include logo.svg %}</a>
-     <p class="footer__copy">&copy; {{ site.time | date: '%Y' }} {{ site.title  }} | Proudly built with <a href="http://jekyllrb.com" target="_blank">Jekyll</a></p>
+     <div class="footerInfo">
+       <a class="footerInfo__logo" href="{{ site.baseurl }}/">{% include logo--footer.svg %}</a>
+       <p class="footerInfo__item">&copy; {{ site.time | date: '%Y' }} <a href="https://commutercreative.com/themes/fixie/">Fixie Theme<a/> by <a href="https://commutercreative.com/themes/">Commuter Creative</a></p>
+       <p class="footerInfo__item">Photos via <a href="https://unsplash.com/">Unsplash</a></p>
+       <p class="footerInfo__item">Icons via <a href="https://www.flaticon.com/">FlatIcon</a></p>
+     </div>
+
+     <div class="footerNav">
+       <ul class="noList footerNav__list">
+         {% for link in site.navigation %}{% assign current = nil %}{% if page.url contains link.url or page.url == 'index.html' %}{% assign current = 'current' %}{% endif %}
+         <li class="footerNav__link {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+           <a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
+         </li>
+         {% endfor %}
+       </ul>
+       <ul class="noList footerNav__list footerNav__list--social">
+         {% for link in site.social %}
+         <li class="footerNav__link">
+           <a href="{{ link.url | prepend: site.baseurl }}"><img src="{{ link.icon }}" alt=""></a>
+         </li>
+         {% endfor %}
+       </ul>
+     </div>
    </div>
 </footer><!-- end .footer -->
