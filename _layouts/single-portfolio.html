@@ -12,9 +12,10 @@
       <div class="themeIntroContainer wrap">
         <div class="themeIntro__info">
           <h1>{{ page.name }}</h1>
-          <p>{{ content }}</p>
-          <a href="{{ page.github }}" class="button button--sm themeIntro__button--github">Download on Github</a>
-          <a href="{{ page.demo }}" class="button button--sm themeIntro__button--demo">View Demo</a>
+          <p>{{ page.description }}</p>
+          {% for callout in page.callouts %}
+            <a href="{{ callout.url }}" class="button button--sm themeIntro__button">{{ callout.text }}</a>
+          {% endfor %}
         </div>
         <div class="themeIntro__thumb">
           <a href="{{ page.github }}">
@@ -25,6 +26,12 @@
             </picture>
           </a>
         </div>
+      </div>
+    </div>
+
+    <div class="themeContent">
+      <div class="wrap wrap--md">
+        {{content}}
       </div>
     </div>
 

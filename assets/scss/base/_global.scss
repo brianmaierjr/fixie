@@ -49,3 +49,29 @@ object {
   max-width: 100%;
   height: auto;
 }
+
+/***************
+WRAPS
+***************/
+
+.wrap {
+  &--md {
+    max-width: map-get($wraps, md);
+  }
+}
+
+/***************
+FLEX
+***************/
+
+.flex {
+  flex: 1;
+
+  &--half {
+    flex-basis: 50%;
+  }
+
+  &--full {
+    flex-basis: 100%;
+  }
+}

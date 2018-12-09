@@ -1,4 +1,56 @@
-.themes {
+.work {
   text-align: center;
   @include sectionspace;
+
+  &Container {
+    @include min(md) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.workItem {
+  display: block;
+  overflow: hidden;
+  padding: rem(20);
+  position: relative;
+
+  @include min(md) {
+    padding: rem(40);
+    flex: 0 1 50%;
+  }
+
+  &:before {
+    @include button();
+    content: "View Details";
+    position: absolute;
+    top: calc(50% + 1rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s all ease-in-out;
+    z-index: 10;
+    opacity: 0;
+    white-space: nowrap;
+  }
+
+  img {
+    transition: 0.2s all ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    @include min(md) {
+      img {
+        opacity: 0.2;
+      }
+
+      &:before {
+        opacity: 1;
+        top: 50%;
+      }
+    }
+  }
 }

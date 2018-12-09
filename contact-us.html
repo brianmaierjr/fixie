@@ -1,0 +1,39 @@
+---
+layout: no-cta
+title: Contact Us
+---
+
+<div class="contact" id="contact">
+
+  <div class="pageIntro">
+    <div class="wrap">
+      <h1 class="pageIntro__heading">{{ page.title }}</h1>
+
+      <div class="contactForm">
+        <form action="https://formspree.io/your@email.com" method="POST">
+          <ul>
+            <li class="flex flex--half">
+              <label for="name">First Name</label>
+              <input type="text" name="name">
+            </li>
+            <li class="flex flex--half">
+              <label for="name">Last Name</label>
+              <input type="text" name="name">
+            </li>
+            <li class="flex flex--full">
+              <label for="_replyto">Email Address</label>
+              <input type="email" name="_replyto">
+            </li>
+            <li class="flex flex--full">
+              <label for="message">Your Message</label>
+              <textarea name="message" rows="12" cols="80"></textarea>
+            </li>
+            <input type="submit" value="Send">
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</div>

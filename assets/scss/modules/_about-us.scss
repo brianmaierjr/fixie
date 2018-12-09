@@ -3,7 +3,7 @@
   text-align: center;
   color: white;
 
-  @include min(md) {
+  @include min(lg) {
     display: flex;
   }
 
@@ -23,19 +23,27 @@
     justify-content: center;
 
     @include min(sm) {
+      padding-top: rem(120);
+      padding-bottom: rem(120);
+    }
+
+    @include min(lg) {
       order: 1;
       text-align: left;
+      padding-top: rem(180);
+      padding-bottom: rem(180);
     }
   }
 
   &__media {
-    padding-bottom: 51%;
     background-image: url(/assets/img/about-us.jpg);
     background-size: cover;
     background-position: center top;
+    min-height: 40vw;
 
-    @include min(sm) {
+    @include min(lg) {
       order: 2;
+      min-height: auto;
     }
   }
 

@@ -1,22 +1,16 @@
 ---
 layout: default
-title: Simple and minimal portfolio theme for Jekyll
+title: Our Amazing Portfolio
 ---
 
-<div class="home" id="home">
+<div class="portfolio" id="portfolio">
 
-  <div class="pageIntro">
-    <div class="pageIntroContainer wrap">
-      <p>Fixie is a dead simple portfolio site created by <a href="https://commutercreative.com" target="_blank">Commuter Creative</a> based off of our own site. That’s right, we are giving our own site design away, for free. Karma, here we come.</p>
-    </div>
-  </div>
+  {% include page-title.html %}
 
   <div class="work">
-    <div class="wrap">
-      <h1 class="h2 decorative">Featured Work</h1>
+    <div class="workSection themesSection--free wrap">
       <div class="workContainer">
       {% for project in site.portfolio %}
-        {% if project.featured %}
         <a class="workItem" href="{{ project.url }}" data-aos="fade-up">
           <picture>
             <source srcset="{{ site.url }}/assets/img/{{ project.featured-image }}.webp" type="image/webp">
@@ -24,12 +18,9 @@ title: Simple and minimal portfolio theme for Jekyll
             <img src="{{ site.url }}/assets/img/{{ project.featured-image }}.png" alt="{{ theme.title }}">
           </picture>
         </a>
-        {% endif %}
       {% endfor %}
       </div>
     </div>
   </div>
 
 </div>
-
-{% include about-us.html %}

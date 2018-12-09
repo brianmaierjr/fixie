@@ -17,6 +17,7 @@
 @import "modules/cta";
 @import "modules/themes";
 @import "modules/about-us";
+@import "modules/contact-form";
 
 // Import Partials
 @import "partials/header";
@@ -24,7 +25,9 @@
 
 // Page specific
 @import "pages/home";
-@import "pages/theme";
+@import "pages/portfolio";
+@import "pages/about";
+@import "pages/contact";
 @import "pages/404";
 
 // Vendor styles

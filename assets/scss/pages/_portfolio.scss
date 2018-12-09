@@ -1,5 +1,5 @@
 .themeIntro {
-  background-color: $black;
+  background-color: $blue--dark;
   @include sectionspace(60, 100);
   color: white;
 
@@ -53,6 +53,10 @@
   &__button--github {
     background-color: $blue;
   }
+}
+
+.themeContent {
+  @include sectionspace();
 }
 
 .themeFeatures {

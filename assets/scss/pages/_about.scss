@@ -1,0 +1,41 @@
+.about {
+
+  &Content {
+    @include sectionspace();
+    display: flex;
+    flex-direction: column;
+
+    @include min(md) {
+      flex-direction: row;
+    }
+
+    > * {
+      @include min(md) {
+        flex: 1;
+      }
+    }
+
+    &__content {
+      order: 2;
+
+      @include min(md) {
+        order: 1;
+      }
+    }
+
+    &__media {
+      background-color: $blue;
+      background-image: url(/assets/img/about-us.jpg);
+      background-size: cover;
+      background-position: bottom center;
+      min-height: 50vw;
+      order: 1;
+
+      @include min(md) {
+        order: 2;
+        margin-left: rem(40);
+        min-height: auto;
+      }
+    }
+  }
+}

@@ -19,16 +19,20 @@ navigation:
  - title: Home
    url: /index.html
  - title: Portfolio
-   url: /portfolio.html
+   url: /portfolio
  - title: About Us
-   url: /about-us.html
+   url: /about-us
  - title: Contact Us
-   url: /contact-us.html
+   url: /contact-us
 
 social:
- - icon: test.svg
-   url: https://github.com/brianmaierjr/fixie/
- - icon: test2.svg
-   url: https://github.com/brianmaierjr/
+ - icon: icon-twitter.svg
+   url: https://twitter.com/brianmaierjr
+ - icon: icon-facebook.svg
+   url: https://facebook.com/brianmaierjr
+ - icon: icon-instagram.svg
+   url: https://instagram.com/brian_maier_jr
+ - icon: icon-github.svg
+   url: https://github.com/brianmaierjr
 
 google_analytics: "UA-58263416-1"
