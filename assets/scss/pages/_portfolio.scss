@@ -75,9 +75,10 @@
   }
 
   &Item {
-    background: $gray--light;
+    background: $blue--light;
     padding: rem(20);
     margin-bottom: rem(20);
+    color: white;
 
     @include min(md) {
       flex: 0 1 calc(50% - 40px);

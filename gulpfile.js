@@ -6,30 +6,30 @@ var cp = require("child_process");
 var cssnano = require("gulp-cssnano");
 var errorHandler = require("gulp-error-handle");
 
-var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
-var messages = {
-  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
+// var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
+// var messages = {
+//   jekyllBuild: '<span style="color: grey">Running:</span> $ bundle execjekyll build'
+// };
 
 /**
  * Build the Jekyll Site
  */
-gulp.task("jekyll-build", function(done) {
-  browserSync.notify(messages.jekyllBuild);
-  return cp.spawn(jekyll, ["build"], { stdio: "inherit" }).on("close", done);
-});
+// gulp.task("jekyll-build", function(done) {
+//   browserSync.notify(messages.jekyllBuild);
+//   return cp.spawn(jekyll, ["build"], { stdio: "inherit" }).on("close", done);
+// });
 
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task("jekyll-rebuild", ["jekyll-build"], function() {
-  browserSync.reload();
-});
+// gulp.task("jekyll-rebuild", ["jekyll-build"], function() {
+//   browserSync.reload();
+// });
 
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task("browser-sync", ["sass", "jekyll-build"], function() {
+gulp.task("browser-sync", ["sass"], function() {
   browserSync({
     server: {
       baseDir: "_site"
@@ -63,7 +63,7 @@ gulp.task("sass", function() {
  */
 gulp.task("watch", function() {
   gulp.watch(["assets/scss/*.scss", "assets/scss/*/*.scss"], ["sass"]);
-  gulp.watch(["*.html", "_layouts/*.html", "_includes/*.html", "_posts/*"], ["jekyll-rebuild"]);
+  // gulp.watch(["*.html", "_layouts/*.html", "_includes/*.html", "_posts/*"], ["jekyll-rebuild"]);
 });
 
 /**
