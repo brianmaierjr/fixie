@@ -1,7 +1,7 @@
 title: Fixie
 description: A simple and minimal portfolio theme for Jekyll
 
-# url: http://brianmaierjr.github.com/fixie
+url: https://brianmaierjr.com/fixie
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
 
